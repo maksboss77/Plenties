@@ -7,12 +7,7 @@ using namespace std;
 template <class T> 
 class Planty {
 	
-	class Node {
-		public:
-			T data;
-			Node* next;
-			Node* previous;
-	};
+	class Node(T t);
 
 	private:
 		Node* first;

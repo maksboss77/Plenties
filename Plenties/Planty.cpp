@@ -1,5 +1,11 @@
 #include "Planty.h"
 
+class Node(T t){
+public:
+	a data;
+	Node* next;
+	Node* previous;
+};
 
 template<class T>
 Planty<T>::Planty()
