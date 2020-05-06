@@ -27,16 +27,62 @@ Planty<T>::~Planty()
 template<class T>
 int Planty<T>::insert(T a)
 {
-	return 0;
+	Node* cur = first;
+	if (!cur) {
+		Node* nd = new Node();
+		if (!nd)
+			return 0;
+		Node* lfirst = first;
+		first = nd;
+		nd->data = a;
+		nd->previous = NULL;
+		nd->next = NULL;
+	}
+	else {
+		while (cur->next) {
+			if (cur->data == a)
+				return 0;
+			cur = cur->next;
+		}
+		Node* nd = new Node;
+		if (!Node)
+			return 0;
+		cur->next = nd;
+		nd->data = a;
+		nd->previous = cur;
+		nd->next = NULL;
+	}
+	return 1;
+
 }
 
 template<class T>
 int Planty<T>::remove(T a)
 {
-	return 0;
+	Node* cur = first;
+	if (cur == NULL)
+		return 0;
+	while (cur->next) {
+		if (cur->data == a) {
+			if (cur->previous)
+				cur->previous->next = cur->next;
+			if (cur->next)
+				cur->next->previous = cur->previous;
+			delete cur;
+			break
+		}
+		cur = cur->next;
+	}
+	return 1;
 }
 
 template<class T>
 void Planty<T>::out()
 {
+	Node* cur = first;
+	while (cur) {
+		cout << cur->data<< " ";
+		cur = cur->next;
+	}
+	cout << endl;
 }
