@@ -1,12 +1,5 @@
 #include "Planty.h"
 
-class Node(T t){
-public:
-	a data;
-	Node* next;
-	Node* previous;
-};
-
 template<class T>
 Planty<T>::Planty()
 {
@@ -33,12 +26,12 @@ Planty<T>::~Planty()
 template<class T>
 int Planty<T>::insert(T a)
 {
-	Node* cur = first;
+	Node *cur = first;
 	if (!cur) {
-		Node* nd = new Node();
+		Node *nd = new Node();
 		if (!nd)
 			return 0;
-		Node* lfirst = first;
+		Node *lfirst = first;
 		first = nd;
 		nd->data = a;
 		nd->previous = NULL;
@@ -50,7 +43,7 @@ int Planty<T>::insert(T a)
 				return 0;
 			cur = cur->next;
 		}
-		Node* nd = new Node;
+		Node *nd = new Node;
 		if (!Node)
 			return 0;
 		cur->next = nd;
@@ -65,7 +58,7 @@ int Planty<T>::insert(T a)
 template<class T>
 int Planty<T>::remove(T a)
 {
-	Node* cur = first;
+	Node *cur = first;
 	if (cur == NULL)
 		return 0;
 	while (cur->next) {
@@ -75,7 +68,7 @@ int Planty<T>::remove(T a)
 			if (cur->next)
 				cur->next->previous = cur->previous;
 			delete cur;
-			break
+			break;
 		}
 		cur = cur->next;
 	}
@@ -85,7 +78,7 @@ int Planty<T>::remove(T a)
 template<class T>
 void Planty<T>::out()
 {
-	Node* cur = first;
+	Node *cur = first;
 	while (cur) {
 		cout << cur->data<< " ";
 		cur = cur->next;
