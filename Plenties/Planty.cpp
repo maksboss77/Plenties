@@ -44,7 +44,7 @@ int Planty<T>::insert(T a)
 			cur = cur->next;
 		}
 		Node *nd = new Node;
-		if (!Node)
+		if (!nd)
 			return 0;
 		cur->next = nd;
 		nd->data = a;

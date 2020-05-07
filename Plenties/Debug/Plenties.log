@@ -1,3 +1,2 @@
-﻿test.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __thiscall Planty<int>::Planty<int>(void)" (??0?$Planty@H@@QAE@XZ) в функции _main
-test.obj : error LNK2019: ссылка на неразрешенный внешний символ "public: __thiscall Planty<int>::~Planty<int>(void)" (??1?$Planty@H@@QAE@XZ) в функции _main
-C:\Users\maksb\git_GitHub\Plenties\Debug\Plenties.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
+﻿  test.cpp
+  Plenties.vcxproj -> C:\Users\maksb\git_GitHub\Plenties\Debug\Plenties.exe
